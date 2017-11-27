@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Twitter Test Suite">
+
+	<listeners>
+		<listener class-name="com.twitter.extentreportlistener.ExtentReporterNG"></listener>
+	</listeners>
+  
+
+	<test name="Twitter Regression Tests" >
+	   <classes>
+	       <class name="com.twitter.tests.LoginpageTest" />
+	       <class name="com.twitter.tests.HomepageTest" />
+	   </classes>
+	</test>
+</suite>
