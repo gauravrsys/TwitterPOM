@@ -8,7 +8,7 @@
     <classes>
       <class name="com.twitter.tests.LoginpageTest">
         <methods>
-          <include name="login" invocation-numbers="1"/>
+          <include name="login" invocation-numbers="1 2"/>
           <include name="tearDown"/>
           <include name="setUp"/>
         </methods>

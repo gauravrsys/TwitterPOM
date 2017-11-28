@@ -1,6 +1,7 @@
 package com.twitter.tests;
 
 import org.testng.Assert;
+import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
@@ -36,16 +37,20 @@ public class HomepageTest extends TwitterBase {
 		
 	}
 	
-	@Test(priority=2)
-	public void validatePostTweetTest() throws InterruptedException
+	@Test(dataProvider="TweetData",priority=2)
+	public void validatePostTweetTest(String str1) throws InterruptedException
 	{
-		homepage.validatePostTweet("Jai Bhagwaan Ji Ki");
+		homepage.validatePostTweet(str1);
 		
 	}
 	
 	@AfterMethod
-	public void tearDown()
+	public void tearDown(ITestResult result)
 	{
+		if(ITestResult.FAILURE==result.getStatus())
+		{
+			TestUtil.takeScreenshot(driver,result.getEndMillis());
+		}
 		TwitterBase.logout();
 	}
 	
