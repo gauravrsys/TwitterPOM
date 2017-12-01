@@ -4,15 +4,15 @@
 
 <suite name="Twitter Test Suite">
 
-	<listeners>
-		<listener class-name="com.twitter.extentreportlistener.ExtentReporterNG"></listener>
+    <listeners>
+		<listener class-name="com.twitter.extentreportlistener.ExtentReporterNG" />
 	</listeners>
   
 
 	<test name="Twitter Regression Tests" >
 	   <classes>
-	       <class name="com.twitter.tests.LoginpageTest" />
 	       <class name="com.twitter.tests.HomepageTest" />
+	       <class name="com.twitter.tests.LoginpageTest" />
 	   </classes>
 	</test>
 </suite>
