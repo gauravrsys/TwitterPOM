@@ -8,11 +8,18 @@
     <classes>
       <class name="com.twitter.tests.LoginpageTest">
         <methods>
-          <include name="login" invocation-numbers="1 2"/>
+          <include name="login" invocation-numbers="0"/>
           <include name="tearDown"/>
           <include name="setUp"/>
         </methods>
       </class> <!-- com.twitter.tests.LoginpageTest -->
+      <class name="com.twitter.tests.HomepageTest">
+        <methods>
+          <include name="validatePostTweetTest"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.twitter.tests.HomepageTest -->
     </classes>
   </test> <!-- Twitter Regression Tests(failed) -->
 </suite> <!-- Failed suite [Twitter Test Suite] -->
